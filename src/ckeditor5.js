@@ -7,6 +7,8 @@ import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline';
 import Strikethrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough';
 import BlockQuote from '@ckeditor/ckeditor5-block-quote/src/blockquote';
 import Heading from '@ckeditor/ckeditor5-heading/src/heading';
+import Font from '@ckeditor/ckeditor5-font/src/font';
+
 
 import Link from '@ckeditor/ckeditor5-link/src/link';
 import List from '@ckeditor/ckeditor5-list/src/list';
@@ -35,6 +37,7 @@ ClassicEditor.builtinPlugins = [
     Italic,
     Underline,
     Strikethrough,
+    Font,
     BlockQuote,
     Table, TableToolbar, TableCaption, TableProperties, TableCellProperties, TableColumnResize,
     Link,
@@ -61,6 +64,8 @@ ClassicEditor.defaultConfig = {
             'strikethrough',
             'link',
             '|',
+            'fontSize',
+            '|',
             'bulletedList',
             'numberedList',
             'todoList',
@@ -75,6 +80,12 @@ ClassicEditor.defaultConfig = {
     },
     table: {
         contentToolbar: ['tableColumn', 'tableRow', 'mergeTableCells', 'tableProperties', 'tableCellProperties', 'toggleTableCaption']
+    },
+    fontSize: {
+        options: [
+            'default','8','10','12','14','16','18','20','22','24','26','28','30',
+        ],
+        supportAllValues: true
     },
     // This value must be kept in sync with the language defined in webpack.config.js.
     language: 'en'
