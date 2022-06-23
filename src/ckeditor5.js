@@ -27,7 +27,7 @@ import Indent from '@ckeditor/ckeditor5-indent/src/indent';
 import IndentBlock from '@ckeditor/ckeditor5-indent/src/indentblock';
 import Subscript from '@ckeditor/ckeditor5-basic-styles/src/subscript';
 import Superscript from '@ckeditor/ckeditor5-basic-styles/src/superscript';
-
+import HorizontalLine from '@ckeditor/ckeditor5-horizontal-line/src/horizontalline';
 
 export default class ClassicEditor extends ClassicEditorBase { }
 ClassicEditor.builtinPlugins = [
@@ -49,7 +49,8 @@ ClassicEditor.builtinPlugins = [
     Indent,
     IndentBlock,
     Subscript,
-    Superscript
+    Superscript,
+    HorizontalLine
 ];
 
 ClassicEditor.defaultConfig = {
@@ -76,7 +77,9 @@ ClassicEditor.defaultConfig = {
             'undo',
             'redo',
             'insertTable',
-            'subscript', 'superscript'
+            'subscript', 'superscript',
+            '|',
+            'horizontalLine'
         ]
     },
     table: {
