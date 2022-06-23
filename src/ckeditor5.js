@@ -65,6 +65,7 @@ ClassicEditor.defaultConfig = {
             'link',
             '|',
             'fontSize',
+            'fontFamily',
             '|',
             'bulletedList',
             'numberedList',
@@ -83,10 +84,16 @@ ClassicEditor.defaultConfig = {
     },
     fontSize: {
         options: [
-            'default','8','10','12','14','16','18','20','22','24','26','28','30',
+            '8','10','12','14','default','18','20','22','24','26','28','30',
         ],
         supportAllValues: true
     },
+    // fontFamily: {
+    //     options: [
+    //         // ...
+    //     ],
+    //     supportAllValues: true
+    // },
     // This value must be kept in sync with the language defined in webpack.config.js.
     language: 'en'
 };
