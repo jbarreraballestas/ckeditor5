@@ -25,6 +25,7 @@
     "@ckeditor/ckeditor5-link": "^34.1.0",
     "@ckeditor/ckeditor5-list": "^34.1.0",
     "@ckeditor/ckeditor5-paragraph": "^34.1.0",
+    "@ckeditor/ckeditor5-table": "^34.1.0",
     "@ckeditor/ckeditor5-theme-lark": "^34.1.0"
   },
   "devDependencies": {

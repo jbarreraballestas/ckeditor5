@@ -4,18 +4,22 @@ import Autoformat from '@ckeditor/ckeditor5-autoformat/src/autoformat';
 import Bold from '@ckeditor/ckeditor5-basic-styles/src/bold';
 import Italic from '@ckeditor/ckeditor5-basic-styles/src/italic';
 import BlockQuote from '@ckeditor/ckeditor5-block-quote/src/blockquote';
-// import EasyImage from '@ckeditor/ckeditor5-easy-image/src/easyimage';
 import Heading from '@ckeditor/ckeditor5-heading/src/heading';
-// import Image from '@ckeditor/ckeditor5-image/src/image';
-// import ImageCaption from '@ckeditor/ckeditor5-image/src/imagecaption';
-// import ImageStyle from '@ckeditor/ckeditor5-image/src/imagestyle';
-// import ImageToolbar from '@ckeditor/ckeditor5-image/src/imagetoolbar';
-// import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload';
+
 import Link from '@ckeditor/ckeditor5-link/src/link';
 import List from '@ckeditor/ckeditor5-list/src/list';
 import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
+import Table from '@ckeditor/ckeditor5-table/src/table';
+import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
+import TableProperties from '@ckeditor/ckeditor5-table/src/tableproperties';
+import TableCellProperties from '@ckeditor/ckeditor5-table/src/tablecellproperties';
+import TableColumnResize from '@ckeditor/ckeditor5-table/src/tablecolumnresize';
+import TableCaption from '@ckeditor/ckeditor5-table/src/tablecaption';
+
+
+
 export default class ClassicEditor extends ClassicEditorBase {}
 ClassicEditor.builtinPlugins = [
     Essentials,
@@ -23,13 +27,7 @@ ClassicEditor.builtinPlugins = [
     Bold,
     Italic,
     BlockQuote,
-    // EasyImage,
-    // Heading,
-    // Image,
-    // ImageCaption,
-    // ImageStyle,
-    // ImageToolbar,
-    // ImageUpload,
+    Table, TableToolbar, TableCaption, TableProperties, TableCellProperties,TableColumnResize,
     Link,
     List,
     Paragraph,
@@ -47,22 +45,15 @@ ClassicEditor.defaultConfig = {
             'link',
             'bulletedList',
             'numberedList',
-            // 'uploadImage',
             'blockQuote',
             'undo',
-            'redo'
+            'redo',
+            'insertTable',
         ]
     },
-    // image: {
-    //     toolbar: [
-    //         'imageStyle:inline',
-    //         'imageStyle:block',
-    //         'imageStyle:side',
-    //         '|',
-    //         'toggleImageCaption',
-    //         'imageTextAlternative'
-    //     ]
-    // },
+    table: {
+        contentToolbar: [ 'tableColumn', 'tableRow', 'mergeTableCells', 'tableProperties', 'tableCellProperties', 'toggleTableCaption' ]
+    },
     // This value must be kept in sync with the language defined in webpack.config.js.
     language: 'en'
 };
