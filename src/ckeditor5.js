@@ -3,6 +3,8 @@ import Essentials from '@ckeditor/ckeditor5-essentials/src/essentials';
 import Autoformat from '@ckeditor/ckeditor5-autoformat/src/autoformat';
 import Bold from '@ckeditor/ckeditor5-basic-styles/src/bold';
 import Italic from '@ckeditor/ckeditor5-basic-styles/src/italic';
+import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline';
+import Strikethrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough';
 import BlockQuote from '@ckeditor/ckeditor5-block-quote/src/blockquote';
 import Heading from '@ckeditor/ckeditor5-heading/src/heading';
 
@@ -23,14 +25,16 @@ import Indent from '@ckeditor/ckeditor5-indent/src/indent';
 import IndentBlock from '@ckeditor/ckeditor5-indent/src/indentblock';
 
 
-export default class ClassicEditor extends ClassicEditorBase {}
+export default class ClassicEditor extends ClassicEditorBase { }
 ClassicEditor.builtinPlugins = [
     Essentials,
     Autoformat,
     Bold,
     Italic,
+    Underline,
+    Strikethrough,
     BlockQuote,
-    Table, TableToolbar, TableCaption, TableProperties, TableCellProperties,TableColumnResize,
+    Table, TableToolbar, TableCaption, TableProperties, TableCellProperties, TableColumnResize,
     Link,
     List,
     Paragraph,
@@ -49,6 +53,8 @@ ClassicEditor.defaultConfig = {
             'alignment',
             'bold',
             'italic',
+            'underline',
+            'strikethrough',
             'link',
             '|',
             'bulletedList',
@@ -63,7 +69,7 @@ ClassicEditor.defaultConfig = {
         ]
     },
     table: {
-        contentToolbar: [ 'tableColumn', 'tableRow', 'mergeTableCells', 'tableProperties', 'tableCellProperties', 'toggleTableCaption' ]
+        contentToolbar: ['tableColumn', 'tableRow', 'mergeTableCells', 'tableProperties', 'tableCellProperties', 'toggleTableCaption']
     },
     // This value must be kept in sync with the language defined in webpack.config.js.
     language: 'en'
