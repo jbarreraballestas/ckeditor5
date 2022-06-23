@@ -18,6 +18,7 @@ import TableCellProperties from '@ckeditor/ckeditor5-table/src/tablecellproperti
 import TableColumnResize from '@ckeditor/ckeditor5-table/src/tablecolumnresize';
 import TableCaption from '@ckeditor/ckeditor5-table/src/tablecaption';
 import RemoveFormat from '@ckeditor/ckeditor5-remove-format/src/removeformat';
+import TodoList from '@ckeditor/ckeditor5-list/src/todolist';
 
 
 export default class ClassicEditor extends ClassicEditorBase {}
@@ -32,7 +33,8 @@ ClassicEditor.builtinPlugins = [
     List,
     Paragraph,
     Alignment,
-    RemoveFormat
+    RemoveFormat,
+    TodoList
 ];
 
 ClassicEditor.defaultConfig = {
@@ -46,6 +48,7 @@ ClassicEditor.defaultConfig = {
             'link',
             'bulletedList',
             'numberedList',
+            'todoList',
             'blockQuote',
             'undo',
             'redo',
