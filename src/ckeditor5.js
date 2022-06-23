@@ -23,6 +23,8 @@ import RemoveFormat from '@ckeditor/ckeditor5-remove-format/src/removeformat';
 import TodoList from '@ckeditor/ckeditor5-list/src/todolist';
 import Indent from '@ckeditor/ckeditor5-indent/src/indent';
 import IndentBlock from '@ckeditor/ckeditor5-indent/src/indentblock';
+import Subscript from '@ckeditor/ckeditor5-basic-styles/src/subscript';
+import Superscript from '@ckeditor/ckeditor5-basic-styles/src/superscript';
 
 
 export default class ClassicEditor extends ClassicEditorBase { }
@@ -42,7 +44,9 @@ ClassicEditor.builtinPlugins = [
     RemoveFormat,
     TodoList,
     Indent,
-    IndentBlock
+    IndentBlock,
+    Subscript,
+    Superscript
 ];
 
 ClassicEditor.defaultConfig = {
@@ -66,6 +70,7 @@ ClassicEditor.defaultConfig = {
             'undo',
             'redo',
             'insertTable',
+            'subscript', 'superscript'
         ]
     },
     table: {
