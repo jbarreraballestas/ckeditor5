@@ -17,7 +17,7 @@ import TableProperties from '@ckeditor/ckeditor5-table/src/tableproperties';
 import TableCellProperties from '@ckeditor/ckeditor5-table/src/tablecellproperties';
 import TableColumnResize from '@ckeditor/ckeditor5-table/src/tablecolumnresize';
 import TableCaption from '@ckeditor/ckeditor5-table/src/tablecaption';
-
+import RemoveFormat from '@ckeditor/ckeditor5-remove-format/src/removeformat';
 
 
 export default class ClassicEditor extends ClassicEditorBase {}
@@ -31,13 +31,14 @@ ClassicEditor.builtinPlugins = [
     Link,
     List,
     Paragraph,
-    Alignment
+    Alignment,
+    RemoveFormat
 ];
 
 ClassicEditor.defaultConfig = {
     toolbar: {
         items: [
-            // 'heading',
+            'removeFormat',
             '|',
             'alignment',
             'bold',
