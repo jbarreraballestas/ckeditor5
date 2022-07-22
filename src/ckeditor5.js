@@ -104,7 +104,7 @@ ClassicEditor.defaultConfig = {
     // },
     image: { toolbar: ["imageTextAlternative", "imageStyle:inline", "imageStyle:block", "imageStyle:side"] },
     // This value must be kept in sync with the language defined in webpack.config.js.
-    language: 'en',
+    language: 'es',
 };
 
 window.ClassicEditor = ClassicEditor;
