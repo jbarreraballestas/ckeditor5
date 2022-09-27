@@ -37,7 +37,6 @@ import ImageStyle from '@ckeditor/ckeditor5-image/src/imagestyle';
 import ImageResize from '@ckeditor/ckeditor5-image/src/imageresize';
 import LinkImage from '@ckeditor/ckeditor5-link/src/linkimage';
 import SimpleUploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/simpleuploadadapter';
-import Base64UploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/base64uploadadapter';
 import ImageInsert from '@ckeditor/ckeditor5-image/src/imageinsert';
 import AutoImage from '@ckeditor/ckeditor5-image/src/autoimage';
 import CodeBlock from '@ckeditor/ckeditor5-code-block/src/codeblock';
@@ -72,7 +71,6 @@ ClassicEditor.builtinPlugins = [
     HorizontalLine,
     Image, ImageStyle, ImageResize, ImageToolbar, ImageCaption, LinkImage, ImageInsert, AutoImage,
     SimpleUploadAdapter,
-    Base64UploadAdapter,
     CodeBlock,
     FindAndReplace,
     SpecialCharacters,
